@@ -1,0 +1,13 @@
+<template>
+    <lightning-carousel> <!--disable-auto-scroll-->
+        <template if:true={carousel}> <!-- Verifica se a variável "carousel" é verdadeira -->
+            <template for:each={carousel} for:item="photo"> <!-- Itera sobre cada elemento da variável "carousel" e atribui cada elemento à variável "photo" -->
+                <lightning-carousel-image key={photo.id} src={photo.src} header={photo.header} 
+                    description={photo.description} alternative-text="Test" href={photo.href} target="_blank">
+                    <!-- Cria uma imagem de carrossel com a chave, a fonte (src) e o cabeçalho (header) definidos pelos valores do objeto "photo" -->
+                    <!-- Define a descrição, o texto alternativo (alternative-text), o link (href) e o destino do link (_blank) da imagem de carrossel -->
+                </lightning-carousel-image>
+            </template>
+        </template>
+    </lightning-carousel>
+</template>
