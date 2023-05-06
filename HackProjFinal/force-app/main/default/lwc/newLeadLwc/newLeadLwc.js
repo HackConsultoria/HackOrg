@@ -1,11 +1,13 @@
 import { LightningElement, api } from 'lwc';
 import leadObject from '@salesforce/schema/Lead' //Importa o objeto Lead do Salesforce.
-import FirstName from '@salesforce/schema/Lead.FirstName'; //Importa o campo Name do objeto Lead.
-import LastnameField from '@salesforce/schema/Lead.LastName';
-import Company from '@salesforce/schema/Lead.Company';
-import Status from '@salesforce/schema/Lead.Status';
+import Name from '@salesforce/schema/Lead.Name'; //Importa o campo Name do objeto Lead.
+import CPF__c from '@salesforce/schema/Lead.CPF__c';
+import Email from '@salesforce/schema/Lead.Email';
 import MobilePhone from '@salesforce/schema/Lead.MobilePhone';
-import MobileTipo_de_Projeto__c from '@salesforce/schema/Lead.Tipo_de_Projeto__c';
+import City from '@salesforce/schema/Lead.City';
+import State from '@salesforce/schema/Lead.State';
+import Company from '@salesforce/schema/Lead.Company';
+import Tipo_de_Projeto__c from '@salesforce/schema/Lead.Tipo_de_Projeto__c';
 //import RecordTypeId from '@salesforce/schema/Lead.RecordTypeId';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 //Importa a classe ShowToastEvent do módulo lightning/platformShowToastEvent para exibir mensagens de toast.
@@ -13,11 +15,13 @@ import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 export default class NewLeadLwc extends LightningElement {
 
     leadObject = leadObject; //Declara uma propriedade leadObject e a inicializa com o valor do objeto leadObject importado anteriormente.
-    FirstNameField = FisrtName; //Declara uma propriedade nameField e a inicializa com o valor do campo Nome importado anteriormente.
-    LastNameField = LastName;
-    CompanyField = Company;
-    StatusField = Status;
+    NameField = Name; //Declara uma propriedade nameField e a inicializa com o valor do campo Nome importado anteriormente.
+    CPF__cField = CPF__c;
+    EmailField = Email;
     MobilePhoneField = MobilePhone;
+    CityField = City;
+    StateField = State;
+    CompanyField = Company;
     Tipo_de_Projeto__cField = Tipo_de_Projeto__c;
     /*RecordTypeIdField = RecordTypeId;*/
 

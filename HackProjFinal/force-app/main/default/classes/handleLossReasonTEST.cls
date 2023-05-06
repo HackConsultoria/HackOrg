@@ -5,7 +5,7 @@ public class handleLossReasonTEST {
         Opportunity newOp = new Opportunity(
             CloseDate = System.today(),
             Name = 'Teste de op',
-            StageName = 'Prospecting',
+            StageName = 'Proposta Aceita',
             Amount = 500000
         );
         insert newOp;

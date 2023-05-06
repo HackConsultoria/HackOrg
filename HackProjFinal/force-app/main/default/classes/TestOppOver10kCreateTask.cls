@@ -22,6 +22,7 @@ public class TestOppOver10kCreateTask {
         Opportunity opp = OpportunityBO.criaOportunidade();
         insert opp;
         opp.StageName = 'Perda';
+        opp.Motivo__c = 'F total';
         update opp;
         Task task = new Task();
         
@@ -30,7 +31,7 @@ public class TestOppOver10kCreateTask {
         }catch (Exception e){
             System.assert(false);
         }
-        System.assert(task.WhatId == opp.Id);
+        System.assert(task.WhatId == opp.Id, 'Não criou tarefa!');
 
     }
 }

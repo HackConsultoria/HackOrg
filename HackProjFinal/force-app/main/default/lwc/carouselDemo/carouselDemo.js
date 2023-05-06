@@ -1,11 +1,11 @@
-import { LightningElement } from 'lwc'; 
+import { LightningElement } from 'lwc';
 import carouselStyles from './carouselDemo.css'; // Importa o estilo CSS para o componente
 
-export default class CarouselDemo extends LightningElement { 
-// Declara a classe CarouselDemo como uma extensão de LightningElement
+export default class CarouselDemo extends LightningElement {
+    // Declara a classe CarouselDemo como uma extensão de LightningElement
 
-    carousel = [ 
-    // Declaração de uma variável chamada "carousel" que contém um array de objetos
+    carousel = [
+        // Declaração de uma variável chamada "carousel" que contém um array de objetos
         {
             id: "1",
             header: "Oportunidade Única",
@@ -27,5 +27,13 @@ export default class CarouselDemo extends LightningElement {
             href: "https://www.google.com.br/",
             description: "Leia nosso novo artigo no Blog"
         }
-    ]
+    ];
+    handleImageClick(event) { 
+    //Declaração de uma função chamada handleImageClick que recebe o evento click como argumento.
+    //Essa função handleImageClick é acionada quando uma imagem no carrossel é clicada. Ela extrai o URL associado à imagem e abre esse URL em uma nova guia do navegador.
+        const link = event.currentTarget.dataset.href;
+        //Extrai o valor do atributo data-href do elemento clicado e o armazena na variável link. O atributo data-href é definido no componente lightning-carousel-image como data-href={photo.href}.
+        window.open(link, '_blank');
+        //Abre uma nova janela ou guia do navegador, usando o valor armazenado em link como o URL de destino. O segundo argumento '_blank' indica que a nova janela deve ser aberta em uma nova guia.
+    }
 }

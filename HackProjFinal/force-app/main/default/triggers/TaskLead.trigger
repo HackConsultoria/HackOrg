@@ -1,5 +1,5 @@
 trigger TaskLead on Lead (before update) { 
-    if(Trigger.isUpdate && Trigger.isBefore){ 
+    /*if(Trigger.isUpdate && Trigger.isBefore){ 
         for(Lead newLead : Trigger.New){ 
             if(Trigger.oldMap.get(newLead.Id).Status == 'Contactado' && newLead.Status == 'Em negociação'){                
                 Task newTask = new Task();
@@ -9,5 +9,5 @@ trigger TaskLead on Lead (before update) {
                 insert newTask;
             }
         }
-    }
+    }*/
 }

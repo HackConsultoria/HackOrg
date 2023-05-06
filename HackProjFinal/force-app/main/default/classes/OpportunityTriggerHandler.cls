@@ -28,6 +28,7 @@ public class OpportunityTriggerHandler extends TriggerHandler{
     
     protected override void afterUpdate(){
         new OportunidadeGanhaAcima10k(newList).run();
+        new OppPerdidaHandler(newList, oldMap).run();
     }
 
 }

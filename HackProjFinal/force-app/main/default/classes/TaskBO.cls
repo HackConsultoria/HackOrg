@@ -5,4 +5,8 @@ public class TaskBO {
                 WHERE WhatId = :id
         ];
     }
+
+    public static Task retornaTaskRelacionadaWho(Id id) {
+        return [Select id, Subject, whoId from Task where whoId = :id];
+    }
 }
