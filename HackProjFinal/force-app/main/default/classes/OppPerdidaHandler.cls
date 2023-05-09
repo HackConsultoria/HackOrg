@@ -4,7 +4,8 @@ public class OppPerdidaHandler {
     private Map<Id, Opportunity> m_mapDataOld;
     private Map<Id, Opportunity> m_mapObjFiltered = new Map<Id, Opportunity>();
     private Boolean hasRecords;
-    private final String FASE_ANTIGA = 'Perda';
+    private final String FASE_PERDA = 'Perda';
+    private final String FASE_GANHA = 'Contrato Assinado';
 
     public OppPerdidaHandler(List<Opportunity> lstDataNew, Map<Id,Opportunity> mapDataOld){
         this.m_listDataNew = lstDataNew;
@@ -15,7 +16,7 @@ public class OppPerdidaHandler {
 
     private void filter(){
         for(Opportunity opp : m_listDataNew){
-            if(m_mapDataOld.get(opp.Id).StageName == FASE_ANTIGA && opp.StageName != FASE_ANTIGA){
+            if((m_mapDataOld.get(opp.Id).StageName == FASE_PERDA && opp.StageName != FASE_PERDA) || (m_mapDataOld.get(opp.Id).StageName == FASE_GANHA && opp.StageName != FASE_GANHA)){
                 m_listFiltered.add(opp);
             }      
         }      

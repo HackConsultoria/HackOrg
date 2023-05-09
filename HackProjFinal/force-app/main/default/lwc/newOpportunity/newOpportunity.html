@@ -24,13 +24,14 @@
                         <!--Componente de campo de entrada do Lightning que está vinculado ao campo CloseDateField. Isso permite ao usuário inserir a data de encerramento da oportunidade.-->
                     </div>
                 </div>
-
-                <lightning-button label="Limpar" onclick={handleReset} class="slds-m-right_xx-small"></lightning-button>
-                <!--Componente de botão do Lightning com o rótulo "Limpar". O atributo onclick está associado a uma função handleReset que será executada quando o botão for clicado. A classe slds-m-right_xx-small adiciona um espaçamento à direita pequeno ao botão.-->
-                <lightning-button label="Criar Oportunidade" type="submit" variant="brand"
-                    class="slds-m-right_xx-small"></lightning-button>
-                <!--Componente de botão do Lightning com o rótulo "Criar Oportunidade". Este botão é do tipo "submit" e tem o estilo "brand". A classe slds-m-right_xx-small adiciona um espaçamento à direita pequeno ao botão.-->
-
+                <div class="slds-grid slds-grid_vertical-align-center slds-grid_align-end">
+                    <lightning-button label="Limpar" onclick={handleReset}
+                        class="slds-m-right_xx-small"></lightning-button>
+                    <!--Componente de botão do Lightning com o rótulo "Limpar". O atributo onclick está associado a uma função handleReset que será executada quando o botão for clicado. A classe slds-m-right_xx-small adiciona um espaçamento à direita pequeno ao botão.-->
+                    <lightning-button label="Criar Oportunidade" type="submit" variant="brand"
+                        class="slds-m-right_xx-small"></lightning-button>
+                    <!--Componente de botão do Lightning com o rótulo "Criar Oportunidade". Este botão é do tipo "submit" e tem o estilo "brand". A classe slds-m-right_xx-small adiciona um espaçamento à direita pequeno ao botão.-->
+                </div>
             </lightning-record-edit-form>
         </div>
     </lightning-card>

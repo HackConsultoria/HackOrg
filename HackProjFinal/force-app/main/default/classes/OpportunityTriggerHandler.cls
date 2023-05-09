@@ -23,6 +23,7 @@ public class OpportunityTriggerHandler extends TriggerHandler{
     }
     
     protected override void beforeUpdate(){
+       new OportunidadeNegociacaoEnviaEmail(newList, oldMap).run();
        new handleLossReason(newList);
     }
     
@@ -30,5 +31,4 @@ public class OpportunityTriggerHandler extends TriggerHandler{
         new OportunidadeGanhaAcima10k(newList).run();
         new OppPerdidaHandler(newList, oldMap).run();
     }
-
 }
