@@ -5,6 +5,7 @@ public class OppPerdidaTest {
             CloseDate = System.today(),
             Name = 'Teste de op',
             StageName = 'Perda',
+            Email__c = 'hack@gmail.com',
             Amount = 50000
         );
         insert newOp;

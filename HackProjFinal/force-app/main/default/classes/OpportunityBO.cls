@@ -18,4 +18,18 @@ public class OpportunityBO {
         }
         insert newTasks;
     }
+
+    public static void enviaEmailCatalogoPreco(List<Opportunity> opps){
+        List<Messaging.SingleEmailMessage> emails = new List<Messaging.SingleEmailMessage>();
+            for (Opportunity opp : opps) {
+                if (opp.Email__c != null && opp.Email__c != '') {
+                        Messaging.SingleEmailMessage email = new Messaging.SingleEmailMessage();
+                        email.setToAddresses(new String[] {opp.Email__c});
+                        email.setSubject('Novos Preços');
+                        email.setPlainTextBody('Olá, caro cliente ' + ',\n\nO catálogo de preços da oportunidade ' + opp.Name + ' foi atualizado. Por favor, verifique os novos preços disponíveis.\n\nObrigado,\nHack Consultoria.');
+                        emails.add(email);
+                }          
+            }
+            Messaging.sendEmail(emails);
+    }
 }

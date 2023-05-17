@@ -6,6 +6,7 @@ public class handleLossReasonTEST {
             CloseDate = System.today(),
             Name = 'Teste de op',
             StageName = 'Proposta Aceita',
+            Email__c = 'hack@gmail.com',
             Amount = 500000
         );
         insert newOp;

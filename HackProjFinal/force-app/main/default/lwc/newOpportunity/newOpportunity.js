@@ -4,6 +4,7 @@ import Nome from '@salesforce/schema/Opportunity.Name'; //Importa o campo Name d
 import Amount from '@salesforce/schema/Opportunity.Amount';
 import CloseDate from '@salesforce/schema/Opportunity.CloseDate';
 import StageName from '@salesforce/schema/Opportunity.StageName';
+import Email__c from '@salesforce/schema/Opportunity.Email__c';
 import { ShowToastEvent } from 'lightning/platformShowToastEvent';
 //Importa a classe ShowToastEvent do módulo lightning/platformShowToastEvent para exibir mensagens de toast.
 
@@ -14,6 +15,7 @@ export default class NewOpportunity extends LightningElement {
     AmountField = Amount;
     CloseDateField = CloseDate;
     StageNameField = StageName;
+    EmailField = Email__c;
 
     @api recordId
     //Anotação @api que torna a propriedade recordId acessível para outros componentes.

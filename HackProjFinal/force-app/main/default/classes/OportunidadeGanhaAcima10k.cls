@@ -15,7 +15,7 @@ public class OportunidadeGanhaAcima10k {
     
     private void filter(){
         for(Opportunity opp : m_listDataNew){
-            if(opp.Amount > MAX_OPP_AMOUNT || opp.StageName == WIN_OPP_STAGENAME){
+            if(opp.Amount > MAX_OPP_AMOUNT && opp.StageName == WIN_OPP_STAGENAME){
                 m_listFiltered.add(opp);
             } 
             

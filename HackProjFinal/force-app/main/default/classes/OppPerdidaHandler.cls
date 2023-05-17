@@ -25,7 +25,7 @@ public class OppPerdidaHandler {
     public void run(){
         if(hasRecords){
             for(Opportunity opp : m_listFiltered){
-                opp.addError('Status perdido não pode ser alterado');
+                opp.addError('Esse status não pode ser alterado');
             }
         }
     }
